@@ -7,7 +7,6 @@ class Item {
         this.nextItem = null;
     }
 }
-//define a stack class that has a top pointer and size
 class Stack {
     top: Item | null;
     base: Item | null;
