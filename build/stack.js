@@ -8,7 +8,6 @@ class Item {
     }
 }
 exports.Item = Item;
-//define a stack class that has a top pointer and size
 class Stack {
     constructor() {
         this.top = null;
@@ -18,14 +17,15 @@ class Stack {
     push(value) {
         if (value == null)
             return;
+        this.top = new Item(value);
         if (this.top) {
             const prevTop = this.top;
             this.top = new Item(value);
             this.top.nextItem = prevTop;
         }
         else {
-            this.top = value;
-            this.base = value;
+            this.top = new Item(value);
+            this.top = new Item(value);
         }
         return this.size++;
     }

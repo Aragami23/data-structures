@@ -18,13 +18,14 @@ class Stack {
     }
     push (value: any) {
         if (value == null) return;
+        this.top = new Item(value);
         if (this.top) {
             const prevTop = this.top
             this.top = new Item(value);
             this.top!.nextItem = prevTop;
         } else {
-            this.top = value;
-            this.base = value;
+            this.top = new Item(value);
+            this.top = new Item(value);
         }
         return this.size++;
     }
