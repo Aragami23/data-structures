@@ -27,7 +27,8 @@ class Stack {
             this.top = new Item(value);
             this.top = new Item(value);
         }
-        return this.size++;
+        this.size++;
+        return this.size;
     }
     pop () {
         if (!this.top) return null;
@@ -41,4 +42,4 @@ class Stack {
     }
     
 }
-export { Stack, Item };
+export { Stack };

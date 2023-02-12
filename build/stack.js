@@ -1,13 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Item = exports.Stack = void 0;
+exports.Stack = void 0;
 class Item {
     constructor(value) {
         this.value = value;
         this.nextItem = null;
     }
 }
-exports.Item = Item;
 class Stack {
     constructor() {
         this.top = null;
@@ -27,7 +26,8 @@ class Stack {
             this.top = new Item(value);
             this.top = new Item(value);
         }
-        return this.size++;
+        this.size++;
+        return this.size;
     }
     pop() {
         if (!this.top)
